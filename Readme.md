@@ -3,7 +3,7 @@
 
   A metalsmith plugin to load global metadata from files.
 
-  Supports `.json` and `.yaml` data.
+  Supports `.json`, `.yaml` and `.csv` data.
 
 ## Installation
 
@@ -18,7 +18,8 @@
   "plugins": {
     "metalsmith-metadata": {
       "authors": "./path/to/authors.json",
-      "categories": "./path/to/categories.yaml"
+      "categories": "./path/to/categories.yaml",
+      "things": "./path/to/things.csv"
     }
   }
 }
@@ -33,7 +34,8 @@ var metadata = require('metalsmith-metadata');
 
 metalsmith.use(metadata({
   authors: './path/to/authors.json',
-  categories: './path/to/categories.yaml'
+  categories: './path/to/categories.yaml',
+  things: './path/to/things.csv'
 }));
 ```
 
